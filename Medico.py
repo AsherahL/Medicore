@@ -49,13 +49,20 @@ responses = {
 
 }
 
-while True:
-    user_input = input("Asherah:") #prompt user to enter a greeting
+
+# Streamlit app title
+st.title("Ckaive Chatbot")
+
+# Input for user message
+user_input = st.text_input("Asherah:")
+
+# Process user input
+if user_input:
     if user_input.lower() in responses:
-        ckaive_reply= random.choice(responses[user_input.lower()])
-        print ("Ckaive:", ckaive_reply)
-else:
-     print ("Ckaive:", "I'm sorry, I don't comprehend.")
+        ckaive_reply = random.choice(responses[user_input.lower()])
+        st.write("Ckaive:", ckaive_reply)
+    else:
+        st.write("Ckaive:", "I'm sorry, I don't comprehend.")
 
 
 
