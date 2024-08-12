@@ -4,6 +4,8 @@ from langchain.chains import LLMChain
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from playsound import playsound
+pip install langchain
+
 
 # Initialize the OpenAI model with your API key
 # Replace 'your-api-key-here' with your actual API key for OpenAI
